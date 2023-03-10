@@ -170,7 +170,15 @@ console.log(documentaryInput)
 console.log(sciFiInput)
 console.log(horrorInput)
  
-
 })
 // actionInput.setAttribute('checked',true) 
 console.log(actionInput)
+// function to move from genre selection screen to cards screen 
+function startSwipe() {
+  document.querySelector("#genre-box").classList.add("hide")
+  initCards()
+}
+submit.addEventListener("click",startSwipe);
+
+
+
