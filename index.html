@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+    <title>Finding Flix</title>
+    <!-- tailwind script -->
+    <script src="http://cdn.tailwindcss.com"></script>
+    <!-- flowbite css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- start screen'select genre' button -->
+    <!-- <div id="start"> 
+        <button id="dropdownToggleButton" data-dropdown-toggle="dropdownToggle"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="button">Select Your Genre 
+            <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button> -->
+
+        <!-- start screen toggle content -->
+        <!-- <div id="dropdownToggle"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-72 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownToggleButton">
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <label class="relative inline-flex items-center w-full cursor-pointer">
+                            <input  class="actionMovies"type="checkbox" value="1" class="sr-only peer">
+                            <div
+                                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600">
+                            </div>
+                            <span class="action ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">action</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <label class="relative inline-flex items-center w-full cursor-pointer">
+                            <input class="animeMovies"type="checkbox" value="33" class="sr-only peer">
+                            <div
+                                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600">
+                            </div>
+                            <span class="anime" ml-3 text-sm font-medium text-gray-900 dark:text-gray-300>anime</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <label class="relative inline-flex items-center w-full cursor-pointer">
+                            <input class="comedyMovies" type="checkbox" value="4" class="sr-only peer">
+                            <div
+                                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600">
+                            </div>
+                            <span class="comedy" ml-3 text-sm font-medium text-gray-900 dark:text-gray-300>comedy</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <label class="relative inline-flex items-center w-full cursor-pointer">
+                            <input class="documentaryMovies"type="checkbox" value="6" class="sr-only peer">
+                            <div
+                                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600">
+                            </div>
+                            <span class="documentary" ml-3 text-sm font-medium text-gray-900 dark:text-gray-300>documentary</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <label class="relative inline-flex items-center w-full cursor-pointer">
+                            <input class="sciFiMovies" type="checkbox" value="15" class="sr-only peer">
+                            <div
+                                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600">
+                            </div>
+                            <span class=" science-fiction" ml-3 text-sm font-medium text-gray-900 dark:text-gray-300>sci-fi</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <label class="relative inline-flex items-center w-full cursor-pointer">
+                            <input class="horrorMovies"type="checkbox" value="11" class="sr-only peer">
+                            <div
+                                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600">
+                            </div>
+                            <span class="horror" ml-3 text-sm font-medium text-gray-900 dark:text-gray-300>horror</span>
+                        </label>
+                    </div>
+                </li>
+            </ul> -->
+
+            <!-- new dropdown menu form -->
+<div id="genre-box">
+            <form action="/action_page.php">
+                <label for="genres">Choose a genre:</label>
+                
+                <select id="genres" name="genres">
+                  <option class="actionMovies action" id="action" value="1">action</option>
+                  <option class="animeMovies anime" value="33">anime</option>
+                  <option class="comedyMovies comedy" value="4">comedy</option>
+                  <option class="documentaryMovies documentary"value="6">documentary</option>
+                  <option class="sciFiMovies science-fiction"value="15">sci-fi</option>
+                  <option class="horrorMovies horror"value="11">horror</option>
+                </select>
+                <input id="startbtn" type="submit" value="Submit">
+                </form>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- start screen submit button -->
+            <!-- <button id="startbtn" input type="submit" value="submit"
+                class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-6 mb-2 ml-9">Submit</button> -->
+        </div>
+    </div>
+
+
+
+
+
+    <!-- cards -->
+    <div class="tinder">
+        <div class="tinder--status">
+            <i class="fa fa-remove"></i>
+            <i class="fa fa-heart"></i>
+        </div>
+
+        <div class="tinder--cards">
+            <div class="tinder--card">
+                <img src="https://placeimg.com/600/300/people">
+                <h3>Demo card 1</h3>
+                <p>This is a demo for Tinder like swipe cards</p>
+            </div>
+            <div class="tinder--card">
+                <img src="https://placeimg.com/600/300/animals">
+                <h3>Demo card 2</h3>
+                <p>This is a demo for Tinder like swipe cards</p>
+            </div>
+            <div class="tinder--card">
+                <img src="https://placeimg.com/600/300/nature">
+                <h3>Demo card 3</h3>
+                <p>This is a demo for Tinder like swipe cards</p>
+            </div>
+            <div class="tinder--card">
+                <img src="https://placeimg.com/600/300/tech">
+                <h3>Demo card 4</h3>
+                <p>This is a demo for Tinder like swipe cards</p>
+            </div>
+            <div class="tinder--card">
+                <img src="https://placeimg.com/600/300/arch">
+                <h3>Demo card 5</h3>
+                <p>This is a demo for Tinder like swipe cards</p>
+            </div>
+        </div>
+
+        <div class="tinder--buttons">
+            <button id="nope"><i class="fa fa-remove"></i></button>
+            <button id="love"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+    <script src="./assets/script.js"></script>
+    <!-- flowbite js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
+</body>
+
+</html>
